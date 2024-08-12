@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InspectionVC" customModule="InspectionTest" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="sYc-Ro-7p5" id="lRD-Is-tff"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sYc-Ro-7p5">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-ad-JTi">
+                    <rect key="frame" x="157.66666666666666" y="762" width="78" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="qJ0-Fd-ahM"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                    <connections>
+                        <action selector="submitButtonAction:" destination="-1" eventType="touchUpInside" id="pvL-xD-fsK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
+            <constraints>
+                <constraint firstItem="sYc-Ro-7p5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="41v-xx-HYh"/>
+                <constraint firstItem="tDd-ad-JTi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4v4-TY-5hG"/>
+                <constraint firstItem="sYc-Ro-7p5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GVV-jr-ceV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sYc-Ro-7p5" secondAttribute="trailing" id="JtS-ai-0dF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sYc-Ro-7p5" secondAttribute="bottom" id="PS9-gk-im4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tDd-ad-JTi" secondAttribute="bottom" constant="16" id="Z11-9M-Nxw"/>
+            </constraints>
+            <point key="canvasLocation" x="-8" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
