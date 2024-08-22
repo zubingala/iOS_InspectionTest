@@ -32,6 +32,9 @@
 		1F84C3C52C6A2F1C00DB2F9C /* SurveyAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F84C3C02C6A2F1C00DB2F9C /* SurveyAnswerTableViewCell.swift */; };
 		1F84C3C62C6A2F1C00DB2F9C /* SurveyAnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F84C3C12C6A2F1C00DB2F9C /* SurveyAnswerTableViewCell.xib */; };
 		1F84C3C82C6A360600DB2F9C /* InspectionDetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F84C3C72C6A360600DB2F9C /* InspectionDetailTest.swift */; };
+		1F8AE9D12C775E0800336884 /* InpectionCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8AE9CF2C775E0800336884 /* InpectionCD+CoreDataClass.swift */; };
+		1F8AE9D22C775E0800336884 /* InpectionCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8AE9D02C775E0800336884 /* InpectionCD+CoreDataProperties.swift */; };
+		1FB5BC4F2C74D1690031E133 /* InspectionTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5BC4D2C74D1690031E133 /* InspectionTest.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		1F84C3C02C6A2F1C00DB2F9C /* SurveyAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		1F84C3C12C6A2F1C00DB2F9C /* SurveyAnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyAnswerTableViewCell.xib; sourceTree = "<group>"; };
 		1F84C3C72C6A360600DB2F9C /* InspectionDetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionDetailTest.swift; sourceTree = "<group>"; };
+		1F8AE9CF2C775E0800336884 /* InpectionCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InpectionCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1F8AE9D02C775E0800336884 /* InpectionCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InpectionCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1FB5BC4E2C74D1690031E133 /* SurveyData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SurveyData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 		1F84C35C2C69F1CF00DB2F9C /* InspectionTest */ = {
 			isa = PBXGroup;
 			children = (
+				1FB5BC502C74D1730031E133 /* CoreData */,
 				1F84C3AD2C6A269200DB2F9C /* InspectScreen */,
 				1F84C3982C69F76C00DB2F9C /* Services */,
 				1F84C3952C69F3FC00DB2F9C /* Utilities */,
@@ -271,6 +278,16 @@
 			path = SurveyAnswerTableViewCell;
 			sourceTree = "<group>";
 		};
+		1FB5BC502C74D1730031E133 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1F8AE9CF2C775E0800336884 /* InpectionCD+CoreDataClass.swift */,
+				1F8AE9D02C775E0800336884 /* InpectionCD+CoreDataProperties.swift */,
+				1FB5BC4D2C74D1690031E133 /* InspectionTest.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +304,8 @@
 			dependencies = (
 			);
 			name = InspectionTest;
+			packageProductDependencies = (
+			);
 			productName = InspectionTest;
 			productReference = 1F84C35A2C69F1CF00DB2F9C /* InspectionTest.app */;
 			productType = "com.apple.product-type.application";
@@ -359,6 +378,8 @@
 				Base,
 			);
 			mainGroup = 1F84C3512C69F1CF00DB2F9C;
+			packageReferences = (
+			);
 			productRefGroup = 1F84C35B2C69F1CF00DB2F9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,11 +433,14 @@
 				1F84C3AC2C6A240500DB2F9C /* AppString.swift in Sources */,
 				1F84C3972C69F44F00DB2F9C /* Constants.swift in Sources */,
 				1F84C3942C69F3A600DB2F9C /* AuthModel.swift in Sources */,
+				1F8AE9D12C775E0800336884 /* InpectionCD+CoreDataClass.swift in Sources */,
+				1F8AE9D22C775E0800336884 /* InpectionCD+CoreDataProperties.swift in Sources */,
 				1F84C35E2C69F1CF00DB2F9C /* AppDelegate.swift in Sources */,
 				1F84C3C32C6A2F1C00DB2F9C /* SurveyQuestionTableViewCell.swift in Sources */,
 				1F84C3602C69F1CF00DB2F9C /* SceneDelegate.swift in Sources */,
 				1F84C3AA2C69FC1D00DB2F9C /* AuthScreenVC.swift in Sources */,
 				1F84C3C52C6A2F1C00DB2F9C /* SurveyAnswerTableViewCell.swift in Sources */,
+				1FB5BC4F2C74D1690031E133 /* InspectionTest.xcdatamodeld in Sources */,
 				1F84C3B72C6A2A4B00DB2F9C /* InspectionViewModel.swift in Sources */,
 				1F84C3B02C6A26C700DB2F9C /* InspectModel.swift in Sources */,
 			);
@@ -765,6 +789,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1FB5BC4D2C74D1690031E133 /* InspectionTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FB5BC4E2C74D1690031E133 /* SurveyData.xcdatamodel */,
+			);
+			currentVersion = 1FB5BC4E2C74D1690031E133 /* SurveyData.xcdatamodel */;
+			path = InspectionTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1F84C3522C69F1CF00DB2F9C /* Project object */;
 }

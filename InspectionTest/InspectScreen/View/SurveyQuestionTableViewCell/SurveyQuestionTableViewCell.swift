@@ -2,7 +2,7 @@
 //  SurveyQuestionTableViewCell.swift
 //  InspectionTest
 //
-//  Created by Zubin Gala on 12/08InspectionTest/24.
+//  Created by Zubin Gala on 12/08/24.
 //
 
 import UIKit
@@ -69,6 +69,4 @@ extension SurveyQuestionTableViewCell: UITableViewDelegate, UITableViewDataSourc
         guard let cell = tableView.cellForRow(at: indexPath) as? SurveyAnswerTableViewCell else { return }
         cell.selectedAnsImgView.image = UIImage(systemName: "circle")
     }
-    
-    
 }

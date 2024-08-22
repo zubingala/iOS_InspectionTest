@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
+    struct Static{
+        static let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    }
     struct Webservices {
         static let baseURL = "http://localhost:5001"
         struct Endpoints {

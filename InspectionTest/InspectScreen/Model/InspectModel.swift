@@ -7,7 +7,8 @@
 
 import UIKit
 
-class InspectModel: Codable {
+
+class InspectModel: NSObject, Codable {
     let inspection: InspectionData?
     
     enum CodingKeys: String, CodingKey {
@@ -20,7 +21,7 @@ class InspectModel: Codable {
     }
 }
 
-class InspectionData: Codable {
+class InspectionData: NSObject, Codable {
     let id: Int?
     let inspectionType: InspectionType?
     let area: Area?
@@ -42,7 +43,7 @@ class InspectionData: Codable {
         survey  = try values.decodeIfPresent(Survey.self, forKey: .survey  )
     }
 }
-class InspectionType: Codable {
+class InspectionType: NSObject, Codable {
     let id: Int?
     let name: String?
     let access: String?
@@ -62,7 +63,7 @@ class InspectionType: Codable {
     }
 }
 
-class Area: Codable {
+class Area: NSObject, Codable {
     let id: Int?
     let name: String?
     
@@ -79,7 +80,7 @@ class Area: Codable {
     }
 }
 
-class Survey: Codable {
+class Survey: NSObject, Codable {
     let id: Int?
     let categories: [Category]?
     
@@ -96,7 +97,7 @@ class Survey: Codable {
     }
 }
 
-class Category: Codable {
+class Category: NSObject, Codable {
     let id: Int?
     let name: String?
     let questions: [Question]?
@@ -116,7 +117,7 @@ class Category: Codable {
     }
 }
 
-class Question: Codable {
+class Question: NSObject, Codable {
     let id: Int?
     let name: String?
     let answerChoices: [AnswerChoice]?
@@ -139,7 +140,7 @@ class Question: Codable {
     }
 }
 
-struct AnswerChoice: Codable {
+class AnswerChoice: NSObject, Codable {
     let id: Int?
     let name: String?
     let score: Float?
@@ -150,7 +151,7 @@ struct AnswerChoice: Codable {
         case score  = "score"
     }
     
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try values.decodeIfPresent(Int.self , forKey: .id)
